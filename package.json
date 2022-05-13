@@ -1,0 +1,27 @@
+{
+  "name": "CSCanvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Prayag Mittal",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --fix './**'",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/eslint-parser": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.13.10",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3"
+  }
+}
