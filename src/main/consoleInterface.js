@@ -54,8 +54,8 @@ export default class ConsoleInterface {
         throw new Error('please crete a canvas first');
       }
       if (
-        elem.rendersInside &&
-        !elem.rendersInside(this.canvas.width - 1, this.canvas.heigth - 1)
+        elem.rendersInside
+        && !elem.rendersInside(this.canvas.width - 1, this.canvas.heigth - 1)
       ) {
         throw new Error('invalid shape, it is outside of canvas');
       }

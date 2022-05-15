@@ -12,15 +12,8 @@ export default class FillCommand {
    * @param {*} str
    * @memberof FillCommand
    */
-  constructor(str) {
+  constructor(params) {
     const fillCmd = '[B x y c]';
-    if (!str) throw new Error(`${fillCmd} invalid fill command`);
-    const params = str.split(' ').splice(1);
-    if (params.length !== 3)
-      throw new Error(
-        `${fillCmd} invalid number of parameters: ${params.length}, must be 3`
-      );
-
     const x = parseInt(params[0], 10);
     const y = parseInt(params[1], 10);
     try {

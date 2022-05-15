@@ -12,14 +12,8 @@ export default class LineCommand {
    * @param {*} str
    * @memberof LineCommand
    */
-  constructor(str) {
+  constructor(params) {
     const lineCmd = '[L x1 y1 x2 y2]';
-    if (!str) throw new Error(`${lineCmd} invalid line command`);
-    const params = str.split(' ').splice(1);
-    if (params.length !== 4)
-      throw new Error(
-        `${lineCmd} invalid number of parameters: ${params.length}, must be 4`
-      );
     const inputs = params.map((c) => parseInt(c, 10));
     try {
       this.shape = new Line(inputs[0], inputs[1], inputs[2], inputs[3]);

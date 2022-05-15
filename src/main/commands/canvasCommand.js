@@ -12,15 +12,8 @@ export default class CanvasCommand {
    * @param {*} str
    * @memberof CanvasCommand
    */
-  constructor(str) {
+  constructor(params) {
     const canvasCmd = '[Canvas: C w h]';
-    if (!str) throw new Error(`${canvasCmd} invalid canvas command`);
-    const params = str.split(' ').splice(1);
-    if (params.length !== 2) {
-      throw new Error(
-        `${canvasCmd} invalid number of parameters: ${params.length}, must be 2`
-      );
-    }
     const inputs = params.map((c) => parseInt(c, 10));
     try {
       this.shape = new Canvas(inputs[0], inputs[1]);

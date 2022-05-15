@@ -12,14 +12,8 @@ export default class RectangleCommand {
    * @param {*} str
    * @memberof RectangleCommand
    */
-  constructor(str) {
+  constructor(params) {
     const rectangleCmd = '[R x1 y1 x2 y2]';
-    if (!str) throw new Error(`${rectangleCmd} invalid rectangle command`);
-    const params = str.split(' ').splice(1);
-    if (params.length !== 4)
-      throw new Error(
-        `${rectangleCmd} invalid number of parameters: ${params.length}, must be 4`
-      );
     const inputs = params.map((c) => parseInt(c, 10));
     try {
       this.shape = new Rectangle(inputs[0], inputs[1], inputs[2], inputs[3]);
